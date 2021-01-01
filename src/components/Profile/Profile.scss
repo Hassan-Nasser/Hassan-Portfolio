@@ -1,0 +1,58 @@
+.image {
+  display: inline-block;
+  position: relative;
+
+  .profile-image {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  &.fit {
+    display: block;
+    width: 100%;
+  }
+
+  &.featured {
+    display: block;
+    width: 100%;
+    margin: 0 0 2em 0;
+  }
+
+  &.left {
+    float: left;
+    margin: 0 2em 2em 0;
+  }
+
+  &.centered {
+    display: block;
+    margin: 0 0 2em 0;
+
+    img {
+      margin: 0 auto;
+      width: auto;
+    }
+  }
+}
+
+.title-profile {
+  width: 59%;
+  margin:0 auto;
+  color: #e5e5e5;
+  h1 {
+    font-size: 4em;
+  }
+  /* background-color: aliceblue; */
+  .intro {
+    font-size: 1.35em !important;
+    text-align:left;
+
+  }
+}
+.profile-header{
+  margin-bottom: 4%;
+}
+.scrolly{
+  position: relative;
+  top: 13%;
+}

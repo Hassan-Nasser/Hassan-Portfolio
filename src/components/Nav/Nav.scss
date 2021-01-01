@@ -1,0 +1,208 @@
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  //   display: block;
+}
+#nav {
+  background-color: #282828;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  cursor: default;
+  height: 3.5em;
+  line-height: 3.5em;
+
+  ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    display: inline-block;
+    padding-left: 0;
+  }
+
+  a {
+    // @include vendor("transition", "background-color .2s ease-in-out");
+    position: relative;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    font-weight: 600;
+    border-radius: 8px;
+    color: #fff;
+    height: 2.5em;
+    line-height: 2.5em;
+    padding: 0 1.25em;
+
+    &:hover {
+      color: #fff !important;
+      background: #383838;
+    }
+
+    &.active {
+      background: #484848;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -0.6em;
+        left: 50%;
+        margin-left: -0.75em;
+        border-left: solid 0.75em transparent;
+        border-right: solid 0.75em transparent;
+        border-top: solid 0.6em #282828;
+      }
+    }
+  }
+}
+#nav a {
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #fff;
+  height: 2.5em;
+  line-height: 2.5em;
+  padding: 0 1.25em;
+}
+// @include breakpoint("<=small") {
+//   #nav {
+//     height: 44px;
+//     line-height: 44px;
+
+//     a {
+//       padding: 0 0.75em;
+//       height: inherit;
+//       line-height: inherit;
+//       border-radius: 0;
+
+//       &:hover {
+//         background-color: transparent;
+//       }
+//     }
+//   }
+// }
+#top {
+  padding: 8em 0;
+
+  .image {
+    width: 24em;
+    height: 24em;
+    margin: 0;
+  }
+}
+.wrapper {
+  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05),
+    inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  padding: 5em 0 8em 0;
+  text-align: center;
+
+  &.style1 {
+    background-image: none;
+    background-color: #181818;
+  }
+
+  &.style2 {
+    background-color: #181818;
+    text-shadow: 1px 1px 0px #181818;
+    color: #e5e5e5;
+  }
+
+  &.style3 {
+    background-color: #181818;
+    text-shadow: 1px 1px 0px #181818;
+    color: #e5e5e5;
+  }
+
+  &.style4 {
+    background-color: #181818;
+    color: #999;
+    text-shadow: -1px -1px 0px #181818;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #e5e5e5;
+    }
+
+    // form {
+    //   input[type="text"],
+    //   input[type="password"],
+    //   select,
+    //   textarea {
+    //     border: none;
+    //     background: #282828;
+
+    //     &:focus {
+    //       background: #252525;
+    //     }
+    //   }
+    // }
+  }
+}
+a {
+  -moz-transition: color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  color: #43b3e0;
+  text-decoration: underline;
+}
+ul.social li a {
+  -moz-transition: top 0.2s ease-in-out;
+  -webkit-transition: top 0.2s ease-in-out;
+  -ms-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  top: 0;
+  position: relative;
+}
+ul.social li a:before {
+
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  background-color: #444;
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 0px 1px #282828,
+    inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
+  color: #2e2e2e !important;
+  display: block;
+  font-size: 26px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  outline: 0;
+  overflow: hidden;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
+  width: 48px;
+}
