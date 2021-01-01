@@ -28,8 +28,8 @@ class Portfolio extends Component {
       <>
         <div className="container">
           <header>
-            <h2>Here’s some stuff I made recently.</h2>
-            <p>Proin odio consequat sapien vestibulum consequat.</p>
+            <h2>My Recent Work</h2>
+            <p>Here are a few projects I've worked on recently. Want to see more? <a href="#contact">Email me</a>.</p>
           </header>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12">
@@ -162,7 +162,6 @@ class Portfolio extends Component {
             </div>
           </div>
           <footer>
-            <p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
             <a href="#contact" className="button large scrolly">
               <button type="button" className="btn btn-lg btn-primary">
                 Get in touch with me

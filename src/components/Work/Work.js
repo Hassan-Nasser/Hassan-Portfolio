@@ -7,7 +7,7 @@ class Work extends Component {
       <>
         <div className="container">
           <header>
-            <h2>Here's all the stuff I do.</h2>
+            <h2>Here's all the stuff I do</h2>
             <p>Softwares and technologies i have multiple years experience at.</p>
           </header>
           <div className="row aln-center">
@@ -61,7 +61,6 @@ class Work extends Component {
             </div>
           </div>
           <footer>
-            <p>Want to check some projects i worked on ?</p>
             <a href="#portfolio" className="button large scrolly">   
               <button type="button" className="btn btn-lg btn-primary">See some of my recent work</button>
             </a>

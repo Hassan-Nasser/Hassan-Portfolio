@@ -15,8 +15,8 @@ class Contact extends Component {
       <>
         <div className="container medium">
           <header>
-            <h2>Have me make stuff for you.</h2>
-            <p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
+            <h2>Get in touch</h2>
+            <p>As a freelancer, i'm available for new projects and collaborations.</p>
           </header>
           <div className="row">
             <div className="col-12">
