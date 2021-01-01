@@ -82,17 +82,17 @@ class Contact extends Component {
                   </a>
                 </li>
                 <li>
-                  <a href="" target="_blank">
+                  <a href="https://www.linkedin.com/in/hassan-naser/" target="_blank">
                     <FontAwesomeIcon icon={faLinkedin} size="3x" />
                   </a>
                 </li>
                 <li>
-                  <a href="" target="_blank">
+                  <a href="https://www.github.com/Hassan-Nasser" target="_blank">
                     <FontAwesomeIcon icon={faGithub} size="3x" />
                   </a>
                 </li>
                 <li>
-                  <a href="" target="_blank">
+                  <a href="https://youtube.com/c/HassanNasserMohamed" target="_blank">
                     <FontAwesomeIcon icon={faYoutube} size="3x" />
                   </a>
                 </li>
