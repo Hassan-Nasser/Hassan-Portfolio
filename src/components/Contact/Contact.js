@@ -72,7 +72,7 @@ class Contact extends Component {
               <h3>Find me on ...</h3>
               <ul className="social">
                 <li>
-                  <a href="https://www.facebook.com/hassan.nasser.1995/" target="_blank">
+                  <a href="https://www.twitter.com/HaSsSaN_NaSsSeR" target="_blank">
                     <FontAwesomeIcon icon={faTwitter} size="3x" />
                   </a>
                 </li>
