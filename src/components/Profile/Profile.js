@@ -7,7 +7,7 @@ class Profile extends Component {
       <>
         <div className="container">
           <div className="row">
-            <div className=" col-12-medium">
+            <div className=" col-12-medium ptofile-section">
               <span className="image fit">
                 <img className="profile-image" src="images/ProfilePicture.jpg" alt="" />
               </span>
