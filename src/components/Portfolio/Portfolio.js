@@ -51,7 +51,7 @@ class Portfolio extends Component {
                     )
                   }
                 >
-                  <img src="images/House-Designer.jpeg" alt="" />
+                  <img src="images/House-Designer.jpg" alt="" />
                   <h3>House Designer</h3>
                 </button>
                 {/* <!-- <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-primary"><img src="images/pic01.jpg" alt="" /></button> --> */}
