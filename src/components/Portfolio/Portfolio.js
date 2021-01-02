@@ -29,7 +29,10 @@ class Portfolio extends Component {
         <div className="container">
           <header>
             <h2>My Recent Work</h2>
-            <p>Here are a few projects I've worked on recently. Want to see more? <a href="#contact">Email me</a>.</p>
+            <p>
+              Here are a few projects I've worked on recently. Want to see more?{" "}
+              <a href="#contact">Email me</a>.
+            </p>
           </header>
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-12">
@@ -44,20 +47,14 @@ class Portfolio extends Component {
                       `A marketing software made as a freelance
                       project for houses realtor to advertise houses more efficient and help
                        people sell and buy houses faster.\n The software is still under development as it
-                        still a prototype for what the final product will look like.  Ornare nOrnare nulla 
-                        proin odio consequat.Ornare nulla proinfffffffffffffffffffff
-                        fff ffff ffff fffffff fffdddd ddddddddddd ddddddddddddd ddddddddd ddd dddddddddddddddd d 
-                        ddddddddd ddddddddd dddd ddddd
-                        dddddddd dddddddd dddddddddd ddddddd ddddd dddd
-                        dddddddd ffff ffffff fff fff ffodio co`
+                        still a prototype for what the final product will look like.`
                     )
                   }
                 >
-                  <img src="images/pic02.jpg" alt="" />
+                  <img src="images/House-Designer.jpeg" alt="" />
                   <h3>House Designer</h3>
                 </button>
                 {/* <!-- <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-primary"><img src="images/pic01.jpg" alt="" /></button> --> */}
-              
               </article>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
@@ -73,11 +70,10 @@ class Portfolio extends Component {
                     )
                   }
                 >
-                  <img src="images/pic02.jpg" alt="" />
+                  <img src="images/AMRB.jpeg" alt="" />
                   <h3>A.M.R.B</h3>
                 </button>
                 {/* <!-- <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-primary"><img src="images/pic01.jpg" alt="" /></button> --> */}
-               
               </article>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
@@ -93,11 +89,10 @@ class Portfolio extends Component {
                     )
                   }
                 >
-                  <img src="images/pic02.jpg" alt="" />
+                  <img src="images/In&Out.jpeg" alt="" />
                   <h3>In & Out Furniture</h3>
                 </button>
                 {/* <!-- <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-primary"><img src="images/pic01.jpg" alt="" /></button> --> */}
-              
               </article>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
@@ -113,11 +108,10 @@ class Portfolio extends Component {
                     )
                   }
                 >
-                  <img src="images/pic02.jpg" alt="" />
+                  <img src="images/Half-Anger.jpeg" alt="" />
                   <h3>Half Anger</h3>
                 </button>
                 {/* <!-- <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-primary"><img src="images/pic01.jpg" alt="" /></button> --> */}
-              
               </article>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
@@ -133,11 +127,10 @@ class Portfolio extends Component {
                     )
                   }
                 >
-                  <img src="images/pic02.jpg" alt="" />
+                  <img src="images/Spooky-Night.jpeg" alt="" />
                   <h3>Spooky Night</h3>
                 </button>
                 {/* <!-- <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-primary"><img src="images/pic01.jpg" alt="" /></button> --> */}
-                
               </article>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
@@ -153,11 +146,10 @@ class Portfolio extends Component {
                     )
                   }
                 >
-                  <img src="images/pic02.jpg" alt="" />
+                  <img src="images/Last-Hope.jpeg" alt="" />
                   <h3>Last Hope</h3>
                 </button>
                 {/* <!-- <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-primary"><img src="images/pic01.jpg" alt="" /></button> --> */}
-               
               </article>
             </div>
           </div>
