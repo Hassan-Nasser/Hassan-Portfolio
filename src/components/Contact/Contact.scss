@@ -14,7 +14,6 @@ select {
 
 form input[type="text"],
 form input[type="email"],
-form input[type="password"],
 form select,
 form textarea {
   -moz-transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -33,12 +32,11 @@ form textarea {
   box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05),
     0px 1px 0px 0px rgba(255, 255, 255, 0.025);
   width: 100%;
-  margin: 0.75em;
+  margin: 0.75em 0;
 }
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
-form input[type="password"]:focus,
 form select:focus,
 form textarea:focus {
   background: #fafafa;
@@ -75,6 +73,7 @@ form ::-moz-focus-inner {
 }
 
 .wrapper.style4 form input[type="text"],
+.wrapper.style4 form input[type="email"],
 .wrapper.style4 form input[type="password"],
 .wrapper.style4 form select,
 .wrapper.style4 form textarea {
@@ -82,6 +81,7 @@ form ::-moz-focus-inner {
   background: #282828;
 }
 
+.wrapper.style4 form input[type="email"]:focus,
 .wrapper.style4 form input[type="text"]:focus,
 .wrapper.style4 form input[type="password"]:focus,
 .wrapper.style4 form select:focus,

@@ -7,13 +7,13 @@ class Profile extends Component {
       <>
         <div className="container">
           <div className="row">
-            <div className=" col-md-6 col-sm-12">
+            <div className=" col-md-6 col-sm-12 col-lg-4">
               <span className="image fit">
                 <img className="profile-image" src="images/ProfilePicture.jpg" alt="" />
               </span>
             </div>
 
-            <div className="title-profile col-md-6 col-sm-12">
+            <div className="title-profile col-md-6 col-sm-12 col-lg-6">
               <header>
                 <h1 className="profile-header">
                   Hi. I'm <strong>Hassan Nasser</strong>

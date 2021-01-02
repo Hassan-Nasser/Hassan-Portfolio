@@ -175,6 +175,7 @@ class Portfolio extends Component {
             <Modal.Body>
               <div className="video image featured">
                 <iframe
+                  title="myFrame"
                   src={this.state.link}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
