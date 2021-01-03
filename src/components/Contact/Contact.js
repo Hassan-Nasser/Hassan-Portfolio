@@ -24,19 +24,13 @@ class Contact extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    let data = {
-      name: this.state.name,
-      subject: this.state.subject,
-      email: this.state.email,
-      message: this.state.message,
-    };
 
     emailjs
       .sendForm(
-        "service_9evfap6",
-        "template_t9c5vsn",
-        data,
-        "user_wuDZX1PZJmH8hBWlRbqIc"
+        "service_r20v2oq",
+        "template_ut7ulbk",
+        event.target,
+        "user_nIYi5nzBdXtnfE7x9yLNv"
       )
       .then(
         (result) => {
