@@ -42,7 +42,6 @@ class Contact extends Component {
             timer: 1500,
           });
           this.setState({ message: "", name: "", subject: "", email: "" });
-          console.log("success , ", result.text);
         },
         (error) => {
           Swal.fire({
@@ -52,7 +51,7 @@ class Contact extends Component {
             showConfirmButton: false,
             timer: 1500,
           });
-          console.log("error, = ", error.text);
+          // console.log("error, = ", error.text);
         }
       );
   };
@@ -85,6 +84,7 @@ class Contact extends Component {
                       id="name"
                       required
                       placeholder="Name"
+                      value={this.state.name}
                       onChange={(e) => this.handleChange("name", e)}
                     />
                   </div>
@@ -95,6 +95,7 @@ class Contact extends Component {
                       id="email"
                       required
                       placeholder="Email"
+                      value={this.state.email}
                       onChange={(e) => this.handleChange("email", e)}
                     />
                   </div>
@@ -105,6 +106,7 @@ class Contact extends Component {
                       id="subject"
                       required
                       placeholder="Subject"
+                      value={this.state.subject}
                       onChange={(e) => this.handleChange("subject", e)}
                     />
                   </div>
@@ -114,6 +116,7 @@ class Contact extends Component {
                       id="message"
                       required
                       placeholder="Message"
+                      value={this.state.message}
                       onChange={(e) => this.handleChange("message", e)}
                     ></textarea>
                   </div>
