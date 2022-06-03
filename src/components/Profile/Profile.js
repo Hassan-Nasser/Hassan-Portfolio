@@ -9,7 +9,7 @@ class Profile extends Component {
           <div className="row">
             <div className=" col-md-6 col-sm-12 col-lg-4">
               <span className="image fit">
-                <img className="profile-image" src="images/ProfilePicture.jpg" alt="pic" />
+                <img className="profile-image" src={require('../../images/ProfilePicture.jpg')} alt="pic" />
               </span>
             </div>
 

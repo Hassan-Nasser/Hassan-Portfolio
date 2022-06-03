@@ -14,7 +14,7 @@ class Work extends Component {
             <div className="col-xl-3 col-md-6 col-sm-12">
               <section className="box style1">
                 <span className="image-icon ">
-                  <img src="images/Unity.png" alt=""/>
+                  <img src={require("../../images/Unity.png")} alt=""/>
                 </span>
                 <h3 className="subject">Unity</h3>
                 <p className="desription">
@@ -26,7 +26,7 @@ class Work extends Component {
             <div className="col-xl-3 col-md-6 col-sm-12">
               <section className="box style1">
                 <span className="image-icon ">
-                <img src="images/Unreal.png" alt=""/>
+                <img src={require("../../images/Unreal.png")} alt=""/>
                 </span>
                 <h3 className="subject">Unreal</h3>
                 <p className="desription">
@@ -38,7 +38,7 @@ class Work extends Component {
             <div className="col-xl-3 col-md-6 col-sm-12">
               <section className="box style1">
                 <span className="image-icon ">
-                <img src="images/Multiplayer.png" alt=""/>
+                <img src={require("../../images/Multiplayer.png")} alt=""/>
                 </span>
                 <h3 className="subject">Multiplayer</h3>
                 <p className="desription">
@@ -50,7 +50,7 @@ class Work extends Component {
             <div className="col-xl-3 col-md-6 col-sm-12">
               <section className="box style1">
                 <span className="image-icon ">
-                <img src="images/AR&VR.png" alt=""/>
+                <img src={require("../../images/AR&VR.png")} alt=""/>
                 </span>
                 <h3 className="subject">AR & VR</h3>
                 <p className="desription">
