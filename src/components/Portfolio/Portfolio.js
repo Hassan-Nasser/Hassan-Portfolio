@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./Portfolio.scss";
 import Modal from "react-bootstrap/Modal";
 import { Scrollbars } from "react-custom-scrollbars";
+import projects from "../../constants/projects.json";
 
 // import PerfectScrollbar from 'react-perfect-scrollbar';
 // import 'react-perfect-scrollbar/dist/css/styles.css';
@@ -16,6 +17,10 @@ class Portfolio extends Component {
       description: "",
     };
   }
+  componentDidMount() {
+    console.log(projects.length);
+  }
+
   setShow = (flag, header = "", link = "", description = "") => {
     this.setState({ show: flag });
     if (flag) {
@@ -35,6 +40,7 @@ class Portfolio extends Component {
             </p>
           </header>
           <div className="row">
+           
             <div className="col-lg-4 col-md-6 col-sm-12">
               <article className="box style2">
                 <button
@@ -184,7 +190,7 @@ class Portfolio extends Component {
               </div>
               <Scrollbars
                 style={{ height: 100 }}
-                // autoHide
+              // autoHide
               >
                 <div className="description">{this.state.description}</div>
               </Scrollbars>

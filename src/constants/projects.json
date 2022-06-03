@@ -1,0 +1,15 @@
+[
+    {
+        "id":1,
+        "name": "House Designer",
+        "url": "https://www.youtube.com/embed/YhcBwb5yHRs?list=PL_qCkPtr9F2m6bk3zs98Mjsi-IHohAZ2b",
+        "description":"A marketing software made as a freelance project for houses realtor to advertise houses more efficient and help people sell and buy houses faster.\n The software is still under development as it still a prototype for what the final product will look like."
+        
+    },
+    {
+        "id":2,
+        "name": "A.M.R.B",
+        "url": "https://www.youtube.com/embed/GOOo-1z1fAo?list=PL_qCkPtr9F2m6bk3zs98Mjsi-IHohAZ2b",
+        "description":"An augmented reality app made as a freelance project, part of a PhD in 'Innovative ways of teaching' to help students of faculty of physical education to learn in more fun and innovative ways.\n The app contains 35+ 3D animations and videos  and more content will be added for all 4 years students."
+    }
+]
