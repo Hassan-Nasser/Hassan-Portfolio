@@ -3,6 +3,7 @@ import "./Portfolio.scss";
 import Modal from "react-bootstrap/Modal";
 import { Scrollbars } from "react-custom-scrollbars";
 import projects from "../../constants/projects.json";
+import Tag from "../Tag/Tag";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -25,19 +26,16 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       show: false,
-      header: "",
-      link: "",
-      description: "",
-      additionalTransfrom: 0
+      currentProject:""
     };
   }
 
 
 
-  setShow = (flag, header = "", link = "", description = "") => {
+  setShow = (flag, currentProject="") => {
     this.setState({ show: flag });
     if (flag) {
-      this.setState({ header, link, description });
+      this.setState({ currentProject});
     }
   };
 
@@ -116,22 +114,15 @@ class Portfolio extends Component {
             <Carousel
               ssr={false}
               infinite
+              swipeable
               ref={el => (this.Carousel = el)}
               partialVisbile={false}
               customButtonGroup={<CustomSlider />}
               itemClass="slider-image-item"
               responsive={responsive}
               containerClass="carousel-container-with-scrollbar"
-              additionalTransfrom={-this.state.additionalTransfrom}
-            
-              beforeChange={nextSlide => {
-                if (nextSlide !== 0 && this.state.additionalTransfrom !== 150) {
-                  this.setState({ additionalTransfrom: 150 });
-                }
-                if (nextSlide === 0 && this.state.additionalTransfrom === 150) {
-                  this.setState({ additionalTransfrom: 0 });
-                }
-              }}
+              autoPlay={false}
+              shouldResetAutoplay={false}
             >
               {projects && projects.map((project) =>
                 <div key={project.id} className="col-lg-4 col-md-6 col-sm-12" class="image-container increase-size">
@@ -142,14 +133,13 @@ class Portfolio extends Component {
                       onClick={() =>
                         this.setShow(
                           true,
-                          project.name,
-                          project.url,
-                          project.description
+                          project
                         )
                       }
                     >
                       <img src={require(`../../images/${project.cover}`)} alt="" />
                       <h3>{project.name}</h3>
+                      <Tag  className="tag tag-position" tags={project.tags}/>
                     </button>
                     {/* <!-- <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-primary"><img src="images/pic01.jpg" alt="" /></button> --> */}
                   </article>
@@ -180,7 +170,7 @@ class Portfolio extends Component {
               <div className="video image featured">
                 <iframe
                   title="myFrame"
-                  src={this.state.link}
+                  src={this.state.currentProject.url}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -190,8 +180,10 @@ class Portfolio extends Component {
                 style={{ height: 100 }}
               // autoHide
               >
-                <div className="description">{this.state.description}</div>
+                <p className="description">{this.state.currentProject.description}</p>
+                
               </Scrollbars>
+              <Tag className="tag" tags={this.state.currentProject.tags}/>
             </Modal.Body>
           </Modal>
         </div>

@@ -192,19 +192,25 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   background: #ccc;
 }
 .carousel-container-with-scrollbar {
-  padding-left: 100px;
+  padding-left: 20px;
   padding-bottom: 20px;
-  // overflow: visible !important;
 }
-.custom-slider {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 0 20px;
-}
+
 .custom-slider__input {
   width: 100%;
 }
 .slider-image-item {
-  padding: 20px 0 20px 20px;
+  padding: 20px 20px 20px 20px;
 }
+
+.react-multi-carousel-item {
+  height: 250px;
+}
+
+
+// .react-multiple-carousel__arrow--right {
+//   right: 4% !important;
+// }
+// .react-multiple-carousel__arrow--left {
+//   left: 4% !important;
+// }
