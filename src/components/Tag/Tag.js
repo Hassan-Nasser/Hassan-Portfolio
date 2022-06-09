@@ -7,7 +7,7 @@ class Tag extends Component {
     render() {
         return <>
             {this.props.tags && this.props.tags.map((tag) =>
-                <Badge className={this.props.className}>{tag}</Badge>
+                <span className={this.props.className}>{tag}</span>
             )}
         </>;
     }

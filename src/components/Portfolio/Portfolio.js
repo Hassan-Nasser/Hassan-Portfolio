@@ -26,16 +26,16 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       show: false,
-      currentProject:""
+      currentProject: ""
     };
   }
 
 
 
-  setShow = (flag, currentProject="") => {
+  setShow = (flag, currentProject = "") => {
     this.setState({ show: flag });
     if (flag) {
-      this.setState({ currentProject});
+      this.setState({ currentProject });
     }
   };
 
@@ -139,7 +139,7 @@ class Portfolio extends Component {
                     >
                       <img src={require(`../../images/${project.cover}`)} alt="" />
                       <h3>{project.name}</h3>
-                      <Tag  className="tag tag-position" tags={project.tags}/>
+                      <Tag className="tag tag-position" tags={project.tags} />
                     </button>
                     {/* <!-- <button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-primary"><img src="images/pic01.jpg" alt="" /></button> --> */}
                   </article>
@@ -160,6 +160,8 @@ class Portfolio extends Component {
             onHide={() => this.setShow(false)}
             dialogClassName="modal-90w"
             aria-labelledby="example-custom-modal-styling-title"
+            modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
+            className="Modal-Style"
           >
             <Modal.Header closeButton>
               <Modal.Title id="example-custom-modal-styling-title">
@@ -176,14 +178,15 @@ class Portfolio extends Component {
                   allowFullScreen
                 ></iframe>
               </div>
+              <Tag className="tag" tags={this.state.currentProject.tags} />
               <Scrollbars
                 style={{ height: 100 }}
               // autoHide
               >
                 <p className="description">{this.state.currentProject.description}</p>
-                
+
               </Scrollbars>
-              <Tag className="tag" tags={this.state.currentProject.tags}/>
+
             </Modal.Body>
           </Modal>
         </div>
