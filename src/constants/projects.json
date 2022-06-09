@@ -3,7 +3,7 @@
         "id":1,
         "name": "House Designer 1",
         "cover":"House Designer.jpg",
-        "tags" :["AR","VR"],
+        "tags" :["AR","VR","Casual"],
         "url": "https://www.youtube.com/embed/YhcBwb5yHRs?list=PL_qCkPtr9F2m6bk3zs98Mjsi-IHohAZ2b",
         "description":"A marketing software made as a freelance project for houses realtor to advertise houses more efficient and help people sell and buy houses faster.\n The software is still under development as it still a prototype for what the final product will look like."
         
