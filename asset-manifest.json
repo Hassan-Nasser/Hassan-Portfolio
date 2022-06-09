@@ -1,25 +1,30 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.698c3d0c.chunk.css",
-    "main.js": "/Portfolio/static/js/main.e9c8126a.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.e9c8126a.chunk.js.map",
-    "runtime-main.js": "/Portfolio/static/js/runtime-main.31fe6a81.js",
-    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.31fe6a81.js.map",
-    "static/css/2.20aa2d7b.chunk.css": "/Portfolio/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.4bf7e06c.chunk.js": "/Portfolio/static/js/2.4bf7e06c.chunk.js",
-    "static/js/2.4bf7e06c.chunk.js.map": "/Portfolio/static/js/2.4bf7e06c.chunk.js.map",
-    "static/js/3.21f71d7b.chunk.js": "/Portfolio/static/js/3.21f71d7b.chunk.js",
-    "static/js/3.21f71d7b.chunk.js.map": "/Portfolio/static/js/3.21f71d7b.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.2185e852.css",
+    "main.js": "/Portfolio/static/js/main.3412f673.js",
+    "static/js/377.b701d775.chunk.js": "/Portfolio/static/js/377.b701d775.chunk.js",
+    "static/media/Multiplayer.png": "/Portfolio/static/media/Multiplayer.cf745757bcd691fc2572.png",
+    "static/media/AR&VR.png": "/Portfolio/static/media/AR&VR.d323ad0ba71319981077.png",
+    "static/media/House Designer.jpg": "/Portfolio/static/media/House Designer.830c2603258bc933649d.jpg",
+    "static/media/Unity.png": "/Portfolio/static/media/Unity.660982af4d24e51c8574.png",
+    "static/media/ProfilePicture.jpg": "/Portfolio/static/media/ProfilePicture.1867a6fe21e7a8ea3933.jpg",
+    "static/media/Last-Hope.jpeg": "/Portfolio/static/media/Last-Hope.138c5d201ec36252fe38.jpeg",
+    "static/media/Spooky-Night.jpeg": "/Portfolio/static/media/Spooky-Night.c7d5c10480e3a466aaeb.jpeg",
+    "static/media/AMRB.jpeg": "/Portfolio/static/media/AMRB.3361ee89b441ead4acbd.jpeg",
+    "static/media/Unreal.png": "/Portfolio/static/media/Unreal.197dfa054fdf40f2d57d.png",
+    "static/media/In&Out.jpeg": "/Portfolio/static/media/In&Out.455455d66d582af6fba2.jpeg",
+    "static/media/Half-Anger.jpeg": "/Portfolio/static/media/Half-Anger.c30378cc36e3ac4ecb57.jpeg",
+    "static/media/revicons.eot": "/Portfolio/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/Portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/bg.png": "/Portfolio/static/media/bg.11da69f6334144692627.png",
+    "static/media/revicons.woff": "/Portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/Portfolio/index.html",
-    "static/css/2.20aa2d7b.chunk.css.map": "/Portfolio/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.698c3d0c.chunk.css.map": "/Portfolio/static/css/main.698c3d0c.chunk.css.map",
-    "static/js/2.4bf7e06c.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.4bf7e06c.chunk.js.LICENSE.txt"
+    "main.2185e852.css.map": "/Portfolio/static/css/main.2185e852.css.map",
+    "main.3412f673.js.map": "/Portfolio/static/js/main.3412f673.js.map",
+    "377.b701d775.chunk.js.map": "/Portfolio/static/js/377.b701d775.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.31fe6a81.js",
-    "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.4bf7e06c.chunk.js",
-    "static/css/main.698c3d0c.chunk.css",
-    "static/js/main.e9c8126a.chunk.js"
+    "static/css/main.2185e852.css",
+    "static/js/main.3412f673.js"
   ]
 }
