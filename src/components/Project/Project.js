@@ -6,7 +6,7 @@ import "./Project.scss";
 
 const storage = getStorage();
 
-const Project = ({ project }) => {
+const Project = ({ project,showModal }) => {
     const [projectImage, setProjectImage] = useState(null);
 
     useEffect(() => {
@@ -19,10 +19,7 @@ const Project = ({ project }) => {
             <button
                 className="transparent image featured"
                 onClick={() =>
-                    this.setShow(
-                        true,
-                        project
-                    )
+                    showModal()
                 }
             >
                 {projectImage

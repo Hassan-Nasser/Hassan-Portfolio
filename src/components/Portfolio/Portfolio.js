@@ -71,6 +71,7 @@ class Portfolio extends Component {
               ssr={false}
               infinite
               swipeable
+              draggable={false}
               ref={el => (this.Carousel = el)}
               partialVisbile={false}
               itemClass="slider-image-item"
@@ -80,7 +81,7 @@ class Portfolio extends Component {
               shouldResetAutoplay={false}
             >
               {this.state.projects && this.state.projects.map((project) =>
-                <Project key={project.name} project={project} />
+                <Project key={project.name} project={project} showModal = {()=>this.setShow(true,project)}/>
               )}
             </Carousel>
           </div>
