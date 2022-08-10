@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import Tag from "../Tag/Tag";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
+
 import { db } from "../../config/firebase";
 import "./Project.scss";
 
 const storage = getStorage();
+
+
 
 const Project = ({ project,showModal }) => {
     const [projectImage, setProjectImage] = useState(null);
@@ -26,6 +29,7 @@ const Project = ({ project,showModal }) => {
                     ? <img src={projectImage} alt={project.name} />
                     : <img src={require("../../images/grey.png")} alt={project.name} />}
                 <h3>{project.name}</h3>
+                
                 <Tag className="tag tag-position" tags={project.tags} />
             </button>
         </article>

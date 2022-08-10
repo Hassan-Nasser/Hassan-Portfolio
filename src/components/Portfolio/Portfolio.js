@@ -7,8 +7,12 @@ import Project from "../Project/Project";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { db } from "../../config/firebase";
-import { collection, getDocs } from 'firebase/firestore/lite';
-
+import { collection, query, where, getDocs } from 'firebase/firestore/lite';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import Tab from "react-bootstrap/Tab";
+import Tabs from 'react-bootstrap/Tabs';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const responsive = {
   desktop: {
@@ -31,13 +35,22 @@ class Portfolio extends Component {
     this.state = {
       show: false,
       currentProject: "",
+      projectswithTag: [],
       projects: [],
-      projectImage: ""
+      tags: [],
+      projectImage: "",
+      value: 0
     };
   }
 
+  handleChange = (event, newValue) => {
+    this.setState({ value: newValue });
+  };
+
   componentDidMount() {
     this.getProjects(db);
+    this.getTags(db);
+    this.getProjectsWithTag(db, "FCV3FVPbz5rvRkUPFKUF");
   }
 
   getProjects = async (db) => {
@@ -45,6 +58,28 @@ class Portfolio extends Component {
     const projectSnapshot = await getDocs(projects);
     const projectList = projectSnapshot.docs.map(doc => doc.data());
     this.setState({ projects: projectList });
+  }
+  getTags = async (db) => {
+    const tags = collection(db, 'tags');
+    const tagSnapshot = await getDocs(tags);
+    const tagList = tagSnapshot.docs.map(doc => {
+      const data = {};
+      data.name = doc.data().name;
+      data.id = doc.id
+      return data;
+    });
+    this.setState({ tags: tagList });
+  }
+
+  getProjectsWithTag = async (tagId) => {
+    const tagRef = firebase.firestore().collection('tags').doc(tagId);
+    const projects = await firebase.firestore().collection('projects').where('tags', 'array-contains', tagRef).get();
+    const projectListwithTag = projects.docs.map(doc => doc.data());
+    this.setState({ projectswithTag: projectListwithTag });
+
+  }
+  onSelectTap = (event) => {
+    this.getProjectsWithTag(event)
   }
 
   setShow = (flag, currentProject = "") => {
@@ -67,23 +102,63 @@ class Portfolio extends Component {
             </p>
           </header>
           <div>
-            <Carousel
-              ssr={false}
-              infinite
-              swipeable
-              draggable={false}
-              ref={el => (this.Carousel = el)}
-              partialVisbile={false}
-              itemClass="slider-image-item"
-              responsive={responsive}
-              containerClass="carousel-container-with-scrollbar"
-              autoPlay={false}
-              shouldResetAutoplay={false}
+
+            <Tabs
+              defaultActiveKey="0"
+              id="uncontrolled-tab-example"
+              className="mb-3"
+              onSelect={(e) => this.onSelectTap(e)}
+              justify
             >
-              {this.state.projects && this.state.projects.map((project) =>
-                <Project key={project.name} project={project} showModal = {()=>this.setShow(true,project)}/>
+
+              <Tab eventKey="0" title="All">
+                <Carousel
+                  ssr={false}
+                  infinite
+                  swipeable
+                  draggable={false}
+                  ref={el => (this.Carousel = el)}
+                  partialVisbile={false}
+                  itemClass="slider-image-item"
+                  responsive={responsive}
+                  containerClass="carousel-container-with-scrollbar"
+                  autoPlay={false}
+                  shouldResetAutoplay={false}
+                >
+                  {this.state.projects && this.state.projects.map((project) =>
+                    <Project key={project.name} project={project} showModal={() => this.setShow(true, project)} />
+                  )}
+                </Carousel>
+              </Tab>
+              {this.state.tags && this.state.tags.map(tag =>
+
+                <Tab key={tag.id} eventKey={tag.id} title={tag.name}>
+                  <Carousel
+                    ssr={false}
+                    infinite
+                    swipeable
+                    draggable={false}
+                    ref={el => (this.Carousel = el)}
+                    partialVisbile={false}
+                    itemClass="slider-image-item"
+                    responsive={responsive}
+                    containerClass="carousel-container-with-scrollbar"
+                    autoPlay={false}
+                    shouldResetAutoplay={false}
+                  >
+                    {this.state.projectswithTag && this.state.projectswithTag.map((project) =>
+                      <Project key={project.name} project={project} showModal={() => this.setShow(true, project)} />
+                    )}
+                  </Carousel>
+                </Tab>
+
               )}
-            </Carousel>
+
+
+
+            </Tabs>
+
+
           </div>
           <footer>
             <a href="#contact" className="button large scrolly">
