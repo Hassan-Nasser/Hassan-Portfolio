@@ -48,15 +48,13 @@ class Portfolio extends Component {
   };
 
   componentDidMount() {
-    this.getProjects(db);
+    this.getProjects();
     this.getTags(db);
-    this.getProjectsWithTag(db, "FCV3FVPbz5rvRkUPFKUF");
   }
 
-  getProjects = async (db) => {
-    const projects = collection(db, 'projects');
-    const projectSnapshot = await getDocs(projects);
-    const projectList = projectSnapshot.docs.map(doc => doc.data());
+  getProjects = async () => {
+    const projects = await firebase.firestore().collection('projects').get();
+    const projectList = projects.docs.map(doc => doc.data());
     this.setState({ projects: projectList });
   }
   getTags = async (db) => {
@@ -173,7 +171,6 @@ class Portfolio extends Component {
             onHide={() => this.setShow(false)}
             dialogClassName="modal-90w"
             aria-labelledby="example-custom-modal-styling-title"
-            modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
             className="Modal-Style"
           >
             <Modal.Header closeButton>

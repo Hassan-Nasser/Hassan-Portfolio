@@ -18,8 +18,8 @@ class Tag extends Component {
 
     }
     getTagById = async (tagDocRef) => {
-        const clubSnapshot = await getDoc(tagDocRef);
-        this.setState({ tags: [...this.state.tags, clubSnapshot.data()] })
+        const clubSnapshot = await (await getDoc(tagDocRef)).data();
+        this.setState({ tags: [...this.state.tags, clubSnapshot] })
     };
 
     render() {

@@ -9,11 +9,17 @@ const storage = getStorage();
 
 
 
-const Project = ({ project,showModal }) => {
+const Project = ({ project, showModal }) => {
     const [projectImage, setProjectImage] = useState(null);
 
     useEffect(() => {
-        getDownloadURL(ref(storage, `${project.name}.jpeg`)).then(setProjectImage);
+        let isMounted = true;
+        getDownloadURL(ref(storage, `${project.name}.jpeg`))
+            .then((data) => {
+                if (isMounted)
+                    setProjectImage(data);
+            });
+        return () => { isMounted = false };
     }, [project]);
 
     return <div>
@@ -29,7 +35,7 @@ const Project = ({ project,showModal }) => {
                     ? <img src={projectImage} alt={project.name} />
                     : <img src={require("../../images/grey.png")} alt={project.name} />}
                 <h3>{project.name}</h3>
-                
+
                 <Tag className="tag tag-position" tags={project.tags} />
             </button>
         </article>
