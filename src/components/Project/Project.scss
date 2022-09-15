@@ -8,7 +8,6 @@
   margin-bottom: 0.25em;
   margin-left: .25em;
   position: absolute;
-  top: 6px;
   background-color: black;
   opacity: 0.5;
   border-radius: 3%;
@@ -16,6 +15,21 @@
   border-color: white;
   border-width: 5px;
   color: white;
+}
+.hightlight-header-position{
+  position: relative;
+  bottom: 5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.normal-header-position{
+  position: absolute;
+  top: 4%;
+  width: -webkit-fill-available;
+  left: 2%;
 }
 
 .box.style2 .image {

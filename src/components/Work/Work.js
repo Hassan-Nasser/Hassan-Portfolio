@@ -18,7 +18,7 @@ class Work extends Component {
                 </span>
                 <h3 className="subject">Unity</h3>
                 <p className="desription">
-                  Used unity game engine for 4+ years in different projects,
+                  Used unity game engine for {new Date().getFullYear() - 2017}+ years in different projects,
                   from games to simulations to mobile apps.
                 </p>
               </section>
@@ -61,8 +61,8 @@ class Work extends Component {
             </div>
           </div>
           <footer>
-            <a href="#portfolio" className="button large scrolly">   
-              <button type="button" className="btn btn-lg btn-primary">See some of my recent work</button>
+            <a href="#highlight" className="button large scrolly">   
+              <button type="button" className="btn btn-lg btn-primary">Featured Projects</button>
             </a>
           </footer>
         </div>

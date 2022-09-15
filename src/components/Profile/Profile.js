@@ -6,8 +6,8 @@ class Profile extends Component {
     return (
       <>
         <div className="container">
-          <div className="row">
-            <div className=" col-md-6 col-sm-12 col-lg-4">
+          <div className="row d-flex justify-content-center">
+            <div className="profile-img col-md-6 col-sm-12 col-lg-4">
               <span className="image fit">
                 <img className="profile-image" src={require('../../images/ProfilePicture.jpg')} alt="pic" />
               </span>
@@ -19,14 +19,17 @@ class Profile extends Component {
                   Hi. I'm <strong>Hassan Nasser</strong>
                 </h1>
               </header>
-              <p className="intro">
-                I am a game developer living in Cairo, Egypt. 
-                I recived my B.Sc from faculty of Computers and Artificial Intelligence, Benha University.<br/>
-                I have been working as a game developer for 4+ years. 
-                I enjoy making games and particpate in everything related to games.
-              </p>
+              <div className="intro">
+                <p>
+                  I am a game developer living in Cairo, Egypt.
+                  I recived my B.Sc from faculty of Computers and Artificial Intelligence, Benha University.<br />
+                  I have been working as a game developer for {new Date().getFullYear() - 2017}+ years.
+                  I enjoy making games and particpate in everything related to games.
+                </p>
+              </div>
+
               <a href="#work" className="button large scrolly">
-              <button type="button" className="btn btn-lg btn-primary">Learn about what I do</button>
+                <button type="button" className="btn btn-lg btn-primary">Learn about what I do</button>
               </a>
             </div>
           </div>

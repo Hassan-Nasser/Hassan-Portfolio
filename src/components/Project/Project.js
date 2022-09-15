@@ -9,7 +9,7 @@ const storage = getStorage();
 
 
 
-const Project = ({ project, showModal }) => {
+const Project = ({ project, showModal, tagsExist, headerPosition }) => {
     const [projectImage, setProjectImage] = useState(null);
 
     useEffect(() => {
@@ -34,9 +34,14 @@ const Project = ({ project, showModal }) => {
                 {projectImage
                     ? <img src={projectImage} alt={project.name} />
                     : <img src={require("../../images/grey.png")} alt={project.name} />}
-                <h3>{project.name}</h3>
+                <div className={headerPosition}>
+                    <h3 >{project.name}</h3>
+                </div>
 
-                <Tag className="tag tag-position" tags={project.tags} />
+                {tagsExist && (
+                    <Tag className="tag tag-position" tags={project.tags} />
+                )}
+
             </button>
         </article>
     </div>

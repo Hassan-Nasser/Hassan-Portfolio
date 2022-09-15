@@ -41,7 +41,6 @@
   h1 {
     font-size: 3em;
   }
-  /* background-color: aliceblue; */
   .intro {
     font-size: 1.35em !important;
     text-align:left;
@@ -50,6 +49,7 @@
 }
 .profile-header{
   margin-bottom: 4%;
+  flex: 2;
 }
 .scrolly{
   position: relative;
@@ -57,4 +57,10 @@
 }
 .profile-section{
   margin: 0 auto;
+}
+.title-profile.col-md-6.col-sm-12.col-lg-6 {
+  margin-left: 8%;
+}
+.profile-img{
+  flex: 1;
 }
