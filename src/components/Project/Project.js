@@ -35,7 +35,7 @@ const Project = ({ project, showModal, tagsExist, headerPosition }) => {
                     ? <img src={projectImage} alt={project.name} />
                     : <img src={require("../../images/grey.png")} alt={project.name} />}
                 <div className={headerPosition}>
-                    <h3 >{project.name}</h3>
+                    <span className="project-name">{project.name}</span>
                 </div>
 
                 {tagsExist && (

@@ -72,29 +72,31 @@ class Portfolio extends Component {
               </p>
             </header>
           </div>
-          <div className=" d-flex justify-content-center highlight-work">
+          <div className="row ">
+            <div className="col-12 d-flex justify-content-center highlight-work">
+              <Carousel
+                ssr={false}
+                infinite
+                swipeable
+                draggable={false}
+                ref={el => (this.Carousel = el)}
+                partialVisbile={false}
+                itemClass="slider-image-item"
+                responsive={responsive}
+                containerClass="carousel-container-with-scrollbar"
+                autoPlay={true}
+              >
+                {this.state.projects && this.state.projects.map((project) =>
 
-            <Carousel
-              ssr={false}
-              infinite
-              swipeable
-              draggable={false}
-              ref={el => (this.Carousel = el)}
-              partialVisbile={false}
-              itemClass="slider-image-item"
-              responsive={responsive}
-              containerClass="carousel-container-with-scrollbar"
-              autoPlay={true}
-            >
-              {this.state.projects && this.state.projects.map((project) =>
+                  <Project key={project.name}
+                    tagsExist={false}
+                    project={project}
+                    headerPosition="hightlight-header-position"
+                    showModal={() => this.setShow(true, project)} />
+                )}
+              </Carousel>
+            </div>
 
-                <Project key={project.name}
-                  tagsExist={false}
-                  project={project}
-                  headerPosition="hightlight-header-position"
-                  showModal={() => this.setShow(true, project)} />
-              )}
-            </Carousel>
 
 
           </div>

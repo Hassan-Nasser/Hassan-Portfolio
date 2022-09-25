@@ -1,23 +1,25 @@
 .image.featured {
-    display: block;
-    width: 100%;
-    margin: 0 0 2em 0;
-  }
-  
-.box.style2 h3 {
+  display: block;
+  width: 100%;
+  margin: 0 0 2em 0;
+}
+
+.box.style2 .project-name {
   margin-bottom: 0.25em;
   margin-left: .25em;
-  position: absolute;
   background-color: black;
   opacity: 0.5;
-  border-radius: 3%;
+  border-radius: 7px;
   padding: 5px;
   border-color: white;
   border-width: 5px;
   color: white;
+  font-size: 1.25em;
+  line-height: 1.25em;
 }
-.hightlight-header-position{
-  position: relative;
+
+.hightlight-header-position {
+  position: absolute;
   bottom: 5em;
   width: 100%;
   display: flex;
@@ -25,11 +27,14 @@
   justify-content: center;
 }
 
-.normal-header-position{
+.normal-header-position {
   position: absolute;
   top: 4%;
   width: -webkit-fill-available;
-  left: 2%;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 2%;
+  
 }
 
 .box.style2 .image {
@@ -56,7 +61,7 @@
   padding: 30px 20px 30px 20px;
   margin: 0 0 20px 0 !important;
 
-  h3 {
+  .project-name {
     margin-bottom: 0.25em;
   }
 
@@ -94,6 +99,7 @@
   img {
     display: block;
     width: 100%;
+    border-radius: 10px;
   }
 
   &.fit {
@@ -172,4 +178,3 @@ iframe {
   position: relative;
   height: 25rem;
 }
-

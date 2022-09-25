@@ -16,7 +16,10 @@
     border-radius: 0.25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
-  .tag-position{
-    position: relative;
-    bottom: 3em;
-  }
+  
+  .tag-container {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0.5em;
+}

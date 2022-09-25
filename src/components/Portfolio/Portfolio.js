@@ -150,7 +150,12 @@ class Portfolio extends Component {
                     shouldResetAutoplay={false}
                   >
                     {this.state.projectswithTag && this.state.projectswithTag.map((project) =>
-                      <Project key={project.name} tagsExist={true} project={project} showModal={() => this.setShow(true, project)} />
+                      <Project
+                        key={project.name}
+                        tagsExist={true}
+                        project={project}
+                        headerPosition="normal-header-position"
+                        showModal={() => this.setShow(true, project)} />
                     )}
                   </Carousel>
                 </Tab>

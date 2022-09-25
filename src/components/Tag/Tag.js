@@ -23,11 +23,11 @@ class Tag extends Component {
     };
 
     render() {
-        return <>
+        return <div className="tag-container">
             {this.state.tags && this.state.tags.map((tag) =>
                 <span key={tag.name} className={this.props.className}>{tag.name}</span>
             )}
-        </>;
+        </div>;
     }
 }
 
