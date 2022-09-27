@@ -65,7 +65,7 @@ class Portfolio extends Component {
     return (
       <>
         <div className="container">
-          <div className="row d-flex justify-content-center">
+          <div className=" d-flex justify-content-center">
             <header>
               <h2>Career Highlight</h2>
               <p>

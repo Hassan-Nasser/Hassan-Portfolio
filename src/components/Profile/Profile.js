@@ -7,7 +7,7 @@ class Profile extends Component {
       <>
         <div className="container">
           <div className="row d-flex justify-content-center">
-            <div className="profile-img col-md-6 col-sm-12 col-lg-4">
+            <div className="profile-img col-md-6 col-sm-6 col-lg-4">
               <span className="image fit">
                 <img className="profile-image" src={require('../../images/ProfilePicture.jpg')} alt="pic" />
               </span>
