@@ -49,6 +49,7 @@ class Portfolio extends Component {
   getProjects = async () => {
     const projects = await firebase.firestore().collection('projects').where("spotlight", "==", true).get();
     const projectList = projects.docs.map(doc => doc.data());
+    console.log("hello ", projectList);
     this.setState({ projects: projectList });
   }
 
@@ -84,7 +85,7 @@ class Portfolio extends Component {
                 itemClass="slider-image-item"
                 responsive={responsive}
                 containerClass="carousel-container-with-scrollbar"
-                autoPlay={true}
+              // autoPlay={true}
               >
                 {this.state.projects && this.state.projects.map((project) =>
 

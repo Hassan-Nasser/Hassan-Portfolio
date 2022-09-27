@@ -53,8 +53,9 @@ class Portfolio extends Component {
   }
 
   getProjects = async () => {
-    const projects = await firebase.firestore().collection('projects').get();
+    const projects = await firebase.firestore().collection('projects').orderBy("order").get();
     const projectList = projects.docs.map(doc => doc.data());
+    console.log("all = ", projectList);
     this.setState({ projects: projectList });
   }
   getTags = async (db) => {
@@ -71,7 +72,7 @@ class Portfolio extends Component {
 
   getProjectsWithTag = async (tagId) => {
     const tagRef = firebase.firestore().collection('tags').doc(tagId);
-    const projects = await firebase.firestore().collection('projects').where('tags', 'array-contains', tagRef).get();
+    const projects = await firebase.firestore().collection('projects').where('tags', 'array-contains', tagRef).orderBy("order").get();
     const projectListwithTag = projects.docs.map(doc => doc.data());
     this.setState({ projectswithTag: projectListwithTag });
 

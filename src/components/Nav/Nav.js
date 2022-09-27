@@ -10,8 +10,8 @@ class Nav extends Component {
   render() {
     return (
       <>
-        <nav id="nav">
-          <ul className="container">
+        <nav id="nav" >
+          <ul>
             <li>
               <a href="#top">Profile</a>
             </li>
