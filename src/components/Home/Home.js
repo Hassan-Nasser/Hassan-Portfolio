@@ -1,9 +1,9 @@
 import { Component } from "react";
-import Nav from "../Nav/Nav";
+import NavBar from "../Nav/Nav";
 
 class Home extends Component {
   render() {
-    return <Nav />;
+    return <NavBar />;
   }
 }
 export default Home;

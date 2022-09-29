@@ -2,118 +2,38 @@ html {
   scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 768px) {
-  /* Styles */
-  ul{
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    padding: 0 0.4em ;
-  }
-}
-
-nav {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  height: 3.5em;
-}
-#nav {
-  background-color: #282828;
-  text-align: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  cursor: default;
-  height: 3.5em;
-  line-height: 3.5em;
-
-  ul {
-    margin-bottom: 0;
-    list-style: none;
-    padding-left: 0;
-  }
-
-  li {
-    display: inline-block;
-    padding-left: 0;
-  }
-
-  a {
-    // @include vendor("transition", "background-color .2s ease-in-out");
-    position: relative;
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    outline: 0;
-    font-weight: 600;
-    border-radius: 8px;
-    color: #fff;
-    height: 3.5em;
-    line-height: 3.5em;
-    padding: 0 0.7em;
-
-    &:hover {
-      color: #fff !important;
-      background: #383838;
-    }
-
-    &.active {
-      background: #484848;
-
-      &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -0.6em;
-        left: 50%;
-        margin-left: -0.75em;
-        border-left: solid 0.75em transparent;
-        border-right: solid 0.75em transparent;
-        border-top: solid 0.6em #282828;
-      }
-    }
-  }
-}
-#nav a {
-  -moz-transition: background-color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
-  position: relative;
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-  font-weight: 600;
-  border-radius: 8px;
-  color: #fff;
-  height: 3.5em;
-  line-height: 3.5em;
-  padding: 0 0.7em;
-}
-// @include breakpoint("<=small") {
-//   #nav {
-//     height: 44px;
-//     line-height: 44px;
-
-//     a {
-//       padding: 0 0.75em;
-//       height: inherit;
-//       line-height: inherit;
-//       border-radius: 0;
-
-//       &:hover {
-//         background-color: transparent;
-//       }
-//     }
+// @media only screen and (max-width: 768px) {
+//   /* Styles */
+//   ul{
+//     display: flex;
+//     flex-direction: row;
+//     align-items: stretch;
+//     padding: 0 0.4em ;
 //   }
 // }
+
+// nav {
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+//   font-size: 100%;
+//   font: inherit;
+//   vertical-align: baseline;
+//   height: 3.5em;
+// }
+.nav-bar {
+  background-color: #282828;
+  width: 100%;
+  text-align: center;
+  // left: 0;
+  // top: 0;
+  // height: 3.5em;
+  // line-height: 3.5em;
+}
+.bar-container{
+  justify-content: center !important;
+}
+
 .wrapper {
   box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05),
     inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
@@ -150,22 +70,9 @@ nav {
     h6 {
       color: #e5e5e5;
     }
-
-    // form {
-    //   input[type="text"],
-    //   input[type="password"],
-    //   select,
-    //   textarea {
-    //     border: none;
-    //     background: #282828;
-
-    //     &:focus {
-    //       background: #252525;
-    //     }
-    //   }
-    // }
   }
 }
+
 a {
   -moz-transition: color 0.2s ease-in-out;
   -webkit-transition: color 0.2s ease-in-out;
@@ -174,6 +81,7 @@ a {
   color: #43b3e0;
   text-decoration: underline;
 }
+
 ul.social li a {
   -moz-transition: top 0.2s ease-in-out;
   -webkit-transition: top 0.2s ease-in-out;
@@ -186,6 +94,7 @@ ul.social li a {
   top: 0;
   position: relative;
 }
+
 ul.social li a:before {
 
   -moz-transition: background-color 0.2s ease-in-out;
