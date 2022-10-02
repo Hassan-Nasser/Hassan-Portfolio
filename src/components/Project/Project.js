@@ -14,7 +14,7 @@ const Project = ({ project, showModal, tagsExist, headerPosition }) => {
 
     useEffect(() => {
         let isMounted = true;
-        getDownloadURL(ref(storage, `${project.name}.jpeg`))
+        getDownloadURL(ref(storage, `${project.name}.jpg`))
             .then((data) => {
                 if (isMounted)
                     setProjectImage(data);
